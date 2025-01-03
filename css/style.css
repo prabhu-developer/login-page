@@ -12,6 +12,7 @@ section {
     min-height: 100vh;
     display: grid;
     place-items: center;
+    padding: 20px;
 }
 
 .form-control {
@@ -20,7 +21,6 @@ section {
     padding: 10px 15px;
     border-radius: 25px;
     border: 1px solid lightgray;
-    margin-bottom: 20px;
     outline: none;
     font-size: 14px;
 }
@@ -44,13 +44,38 @@ section {
 form {
     background-color: #ffffff3f;
     backdrop-filter: blur(2px);
-    min-width: 330px;
+    min-width: 100%;
     padding: 40px 25px;
     border-radius: 25px;
+}
+
+@media (min-width:375px) {
+    form {
+        min-width: 330px;
+    }
 }
 
 h1 {
     color: #252525;
     margin-bottom: 20px;
     text-align: center;
+}
+
+.error-border {
+    border: 2px solid red;
+    color: red;
+}
+
+#email-error-message,
+#password-error-message {
+    color: #ffe1e1;
+    font-size: 12px;
+    position: absolute;
+    left: 6px;
+    bottom: -18px;
+}
+
+.form-input-box {
+    margin-bottom: 25px;
+    position: relative;
 }
